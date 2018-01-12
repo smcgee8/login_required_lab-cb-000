@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :sessions, only: [:new, :create, :destroy]
-  resources :secrets, only: [:show]
+  resources :secrets, only: :show
 
   # You can have the root of your site routed with "root"
   root 'sessions#new'
