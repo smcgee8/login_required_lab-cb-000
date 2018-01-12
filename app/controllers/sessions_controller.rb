@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     if params[:name].present?
       session[:name] = params[:name]
-      render :welcome
+      redirect_to session_path
     else
       redirect_to new_session_path
     end
@@ -15,6 +15,10 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
+  end
+
+  def show
+    @name = current_user
   end
 
 end
