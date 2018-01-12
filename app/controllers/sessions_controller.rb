@@ -18,8 +18,4 @@ class SessionsController < ApplicationController
     redirect_to controller: 'application', action: 'hello'
   end
 
-  def show
-    @name = current_user
-  end
-
 end
