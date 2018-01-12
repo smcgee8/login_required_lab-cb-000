@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
     if params[:user].present?
       session[:user] = params[:user]
     else
-      render :login
+      redirect_to :new
     end
   end
+  
 end
