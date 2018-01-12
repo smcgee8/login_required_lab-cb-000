@@ -14,7 +14,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.clear
+    session.delete :name
+    redirect_to controller: 'application', action: 'hello'
   end
 
   def show
